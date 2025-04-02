@@ -731,5 +731,5 @@ def update_stats_panel(selected_year, selected_region, selected_countries):
     return stats_content
 
 # Run the app
-
-app.run(debug=False, port=8050)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8050)
