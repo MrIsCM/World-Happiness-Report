@@ -21,7 +21,7 @@ data_file = "Data/Data_Happiness.xlsx"
 
 # Read data
 file_path = Path(__file__).parent / 'Data' / 'Data_Happiness.csv'
-data = pd.read_csv(file_path, encoding='ISO-8859-1', sep=';', decimal=',')
+df = pd.read_csv(file_path, encoding='ISO-8859-1', sep=';', decimal=',')
 
 # Add region category
 
