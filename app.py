@@ -212,6 +212,15 @@ regions = [
     "Western Europe", "Eastern Europe", "North America", "South America", "Africa", "Middle East", "Asia", "Oceania", "Other"
 ]
 
+display_names = {
+    'Explained by: Log GDP per capita'          : 'GDP per Capita',
+    'Explained by: Social support'              : 'Social Support',
+    'Explained by: Healthy life expectancy'     : 'Healthy Life Expectancy',
+    'Explained by: Freedom to make life choices': 'Freedom',
+    'Explained by: Generosity'                  : 'Generosity',
+    'Explained by: Perceptions of corruption'   : 'Corruption',
+}
+
 df['Region'] = df['Country name'].map(region_mapping).fillna('Other')
 
 
@@ -420,13 +429,13 @@ def update_scatter(selected_year, selected_region, selected_factor):
         opacity=0.7,
         height=400,
         color_discrete_sequence=px.colors.qualitative.Bold,
-        title=f'Happiness Score vs {selected_factor.replace("_", " ")} ({selected_year})'
+        title=f'Happiness Score vs {display_names[selected_factor]} ({selected_year})'
     )
     
     # Add trendline
     fig.update_layout(
         template=color_template,
-        xaxis_title=selected_factor.replace('_', ' '),
+        xaxis_title=display_names[selected_factor],
         yaxis_title='Happiness Score',
         legend_title='Region'
     )
@@ -542,7 +551,7 @@ def update_time_series(countries):
             color='Region',
             height=400,
             color_discrete_sequence=px.colors.qualitative.Bold,
-            title='Average Happiness Score by Region (2018-2022)'
+            title='Average Happiness Score by Region (2011-2022)'
         )
     else:
         # Filter by selected countries
@@ -567,6 +576,7 @@ def update_time_series(countries):
     
     return fig
 
+# Radar chart
 @callback(
     Output('country-radar', 'figure'),
     [Input('selected-countries', 'data'),
@@ -607,7 +617,7 @@ def update_radar_chart(countries, selected_year):
     ]
     
     # Format category names for display
-    category_names = [cat.replace('Explained by: ', '') for cat in categories]
+    category_names = [display_names[cat] for cat in categories]
     
     # Extract values
     values = [country_data[cat] for cat in categories]

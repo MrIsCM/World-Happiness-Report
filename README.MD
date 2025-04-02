@@ -3,7 +3,12 @@
 An interactive Dash web application that visualizes and analyzes the World Happiness Report data. The app allows users to explore happiness scores across different countries and years using dynamic graphs and filters.
 
 ## 📸 Screenshots
-*(Add screenshots or a GIF showcasing your app here)*
+
+- Map View
+![Map View](Images/MapView.PNG)
+
+- Happiness vs Freedom (Selectable Factor)
+![Happiness vs Freedom](Images/Factor_and_Top.PNG)
 
 ## ✨ Features
 - **Interactive visualizations**: Explore happiness scores through dynamic charts and graphs.
@@ -68,7 +73,7 @@ world-happiness-dash/
 
 ## 🔮 Future Improvements
 - Host the app online for public access.
-- Automate data extraction
+- Automate ETL.
 
 ## 🤝 Contributing
 Contributions are welcome! If you'd like to improve this project, feel free to fork the repository, create a new branch, and submit a pull request.
