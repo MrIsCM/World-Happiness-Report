@@ -20,7 +20,7 @@ server = app.server
 data_file = "Data/Data_Happiness.xlsx"
 
 # Read data
-file_path = Path(__file__).parent / 'Data' / 'Data.xlsx'
+file_path = Path(__file__).parent / 'Data' / 'Data_Happiness.xlsx'
 df = pd.read_excel(file_path)
 
 # Add region category
