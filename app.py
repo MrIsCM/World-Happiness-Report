@@ -20,7 +20,7 @@ server = app.server
 data_file = "Data/Data_Happiness.xlsx"
 
 # Read data
-file_path = Path(__file__).parent / 'Data' / 'Data_Happiness.csv'
+file_path = 'https://github.com/MrIsCM/World-Happiness-Report/blob/main/data/Data_Happiness.csv?raw=true'
 df = pd.read_csv(file_path, encoding='ISO-8859-1', sep=';', decimal=',')
 
 # Add region category
