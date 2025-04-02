@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from color_themes import dark_mode
-import os
+from pathlib import Path
 
 
 # global color_theme, color_template
@@ -20,7 +20,7 @@ server = app.server
 data_file = "Data/Data_Happiness.xlsx"
 
 # Read data
-file_path = os.path.join(os.path.dirname(__file__), 'Data', 'Data.xlsx')
+file_path = Path(__file__).parent / 'Data' / 'Data.xlsx'
 df = pd.read_excel(file_path)
 
 # Add region category
