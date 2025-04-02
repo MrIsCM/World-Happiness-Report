@@ -732,4 +732,4 @@ def update_stats_panel(selected_year, selected_region, selected_countries):
 
 # Run the app
 
-app.run()
+app.run(debug=False, port=8050)
