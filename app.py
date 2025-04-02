@@ -13,6 +13,7 @@ app = dash.Dash(
     title='Global Happiness Dashboard - Dark Mode',
     meta_tags=[{'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}]
 )
+server = app.server
 
 data_file = "Data/Data_Happiness.xlsx"
 
@@ -727,5 +728,5 @@ def update_stats_panel(selected_year, selected_region, selected_countries):
     return stats_content
 
 # Run the app
-if __name__ == '__main__':
-    app.run(debug=True)
+
+app.run()
