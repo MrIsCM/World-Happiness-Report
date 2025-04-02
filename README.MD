@@ -29,12 +29,13 @@ The app uses the **World Happiness Report**, a dataset that measures global happ
 ## 🚀 Installation & Usage
 ### **1. Clone the repository**
 ```bash
-git clone https://github.com/yourusername/world-happiness-dash.git
+git clone https://github.com/MrIsCM/World-Happiness-Report.git
 ```
 
-### **2. Create a virtual environment (optional but recommended)**
+### **2. Create a virtual environment and activate it (optional but recommended)**
 ```bash
-conda 
+conda create --name WHR_Dashboard
+conda activate WRH_Dashboard
 ```
 
 ### **3. Install dependencies**
@@ -52,8 +53,9 @@ Then, open your browser and go to `http://127.0.0.1:8050/` to access the dashboa
 ```
 world-happiness-dash/
 │-- app.py             # Main application file
-│-- assets/            # CSS and other static files
-│-- data/              # Folder for dataset (CSV file)
+|-- color_themes.py    # Aux functions file
+│-- Data/              # Folder for dataset (xlsx file)
+│-- Images/            # Folder for the images
 │-- requirements.txt   # Dependencies
 │-- README.md          # Project documentation
 ```
@@ -66,8 +68,7 @@ world-happiness-dash/
 
 ## 🔮 Future Improvements
 - Host the app online for public access.
-- Add more data sources for deeper analysis.
-- Implement user authentication for personalized insights.
+- Automate data extraction
 
 ## 🤝 Contributing
 Contributions are welcome! If you'd like to improve this project, feel free to fork the repository, create a new branch, and submit a pull request.
