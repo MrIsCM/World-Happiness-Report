@@ -1,8 +1,6 @@
 # Ignore __pycache__ folders and their contents
 __pycache__/
 
-# Ignore all folders called 'Data' and its contents
-Data/
 
 # test files
 test.*
